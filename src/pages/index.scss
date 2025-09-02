@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    margin-left: 70px;
+    margin-top: 40px;
+    display: flex;
+
+   .logo{
+    height: 90px;
+    }
+    .nm-logo{
+        margin-top: 25px;
+        margin-left: 20px;
+    } 
+}
+
+.corpo{
+
+    
+    padding: 30px;
+    display: flex;
+    
+    .menu-lateral{
+
+    .nm-menu{
+        margin-top: 5px;
+        margin-left: 7px;
+    }
+
+    margin-left: 50px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .dashboard{
+        display: flex;
+        .img-dashboard{
+            height: 40px;
+            margin-right: 10px;
+        }
+    }
+
+    .produtos{
+        display: flex;
+        .img-produtos{
+            height: 40px;
+            margin-right: 10px;
+        }
+    }
+
+    .categorias{
+        display: flex;
+        .img-categorias{
+            height: 40px;
+            margin-right: 10px;
+        }
+    }
+}
+
+.principal{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    margin: auto;
+    margin-top: 100px;
+    
+    .cards{
+        display: flex;
+        gap: 100px;
+        margin-bottom: 100px;
+    }
+
+    .estilo-total{
+        background-color: lightgray;
+        padding: 60px;
+        border-radius: 12px;
+    }
+
+    .menu-rapido{
+        display: flex;
+        gap: 50px;
+
+        .estilo-rapido{
+            width: 200px;
+            height: 150px;
+        }
+        
+    }
+
+}
+}
