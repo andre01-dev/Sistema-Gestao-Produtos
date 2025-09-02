@@ -4,8 +4,14 @@ export default function Inicio() {
         <div className='body'>
 
             <div className='header'>
+                <div className='logo-area'>
                 <img className='logo' src="/src/assets/img/logo.png" alt="" />
                 <h1 className='nm-logo'>ShopSence</h1>
+                </div>
+                <div className='login'>
+                <img className='img-login' src="/src/assets/img/login.png" alt="" />
+                <h3 className='nm-usuario'>Nome de Usuário</h3>
+                </div>
             </div>
 
             <div className='corpo'>
@@ -34,19 +40,19 @@ export default function Inicio() {
                     <div className='cards'>
 
                     <div className='total-produtos estilo-total'>
-                        <h1 className='total'>586</h1>
+                        <h1 className='total'>Total Produtos</h1>
                     </div>
 
                     <div className='total-produtos estilo-total'>
-                        <h1 className='total'>586</h1>
+                        <h1 className='total'>Total Vendido</h1>
                     </div>
 
                     <div className='total-produtos estilo-total'>
-                        <h1 className='total'>586</h1>
+                        <h1 className='total'>Baixo Estoque</h1>
                     </div>
 
                     <div className='total-produtos estilo-total'>
-                        <h1 className='total'>586</h1>
+                        <h1 className='total'>Gráfico Produto por Categoria</h1>
                     </div>
 
                     </div>
@@ -54,20 +60,21 @@ export default function Inicio() {
                     <div className='menu-rapido'>
 
                     <div className='consultarTodosProdutos'>
-                        <button className='estilo-rapido'>Consultar Produtos</button>
+                        <button className='estilo-rapido consultar'>Consultar Produtos</button>
                     </div>
 
                     <div className='adicionar-produto'>
-                        <button className='estilo-rapido'>Adicionar Produto</button>
+                        <button className='estilo-rapido adicionar'>Adicionar Produto</button>
                     </div>
 
                     <div className='editar-produto'>
-                        <button className='estilo-rapido'>Editar Produto</button>
+                        <button className='estilo-rapido editar'>Editar Produto</button>
                     </div>
 
                     <div className='Remover-produto'>
-                        <button className='estilo-rapido'>Remover Produto</button>
+                        <button className='estilo-rapido remover'>Remover Produto</button>
                     </div> 
+
                     </div>
                     
 

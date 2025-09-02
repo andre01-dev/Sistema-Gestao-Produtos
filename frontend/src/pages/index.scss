@@ -8,14 +8,30 @@
     margin-left: 70px;
     margin-top: 40px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo-area{
+        display: flex;
+        align-items: center;
+    }
 
    .logo{
     height: 90px;
     }
     .nm-logo{
-        margin-top: 25px;
         margin-left: 20px;
     } 
+    .login{
+        display: flex;
+        align-items: center;
+        padding-right: 70px;
+    }
+    .img-login{
+        height: 50px;
+        margin-right: 10px;
+    }
+    
 }
 
 .corpo{
@@ -73,7 +89,7 @@
     
     .cards{
         display: flex;
-        gap: 100px;
+        gap: 80px;
         margin-bottom: 100px;
     }
 
@@ -81,6 +97,9 @@
         background-color: lightgray;
         padding: 60px;
         border-radius: 12px;
+    }
+    .total{
+        font-size: 18px;
     }
 
     .menu-rapido{
@@ -91,8 +110,19 @@
             width: 200px;
             height: 150px;
         }
-        
+        .remover{
+            background-color: red;
+        }
+        .consultar{
+            background-color: blue;
+        }
+        .adicionar{
+            background-color: green;
+        }
+        .remover{
+            background-color: red;
+        }
     }
-
+    
 }
 }
