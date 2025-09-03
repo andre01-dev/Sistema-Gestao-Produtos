@@ -1,88 +1,74 @@
 import './index.scss'
-export default function Inicio() {
+
+export default function App() {
     return (
-        <div className='body'>
-
-            <div className='header'>
-                <div className='logo-area'>
-                <img className='logo' src="/src/assets/img/logo.png" alt="" />
-                <h1 className='nm-logo'>ShopSence</h1>
+        <div className="app">
+            <aside className="sidebar">
+                <div className='area-logo'>
+                <img src="/src/assets/img/logo.png" height={50} alt="" />
+                <h2 className="logo">ShopSense</h2>
                 </div>
-                <div className='login'>
-                <img className='img-login' src="/src/assets/img/login.png" alt="" />
-                <h3 className='nm-usuario'>Nome de Usuário</h3>
-                </div>
-            </div>
+                <nav className='menu-lateral'>
+                    <ul>
+                        <li>Dashboard</li>
+                        <li>Produtos</li>
+                        <li>Categorias</li>
+                    </ul>
+                </nav>
+            </aside>
 
-            <div className='corpo'>
 
-                <div className='menu-lateral'>
+            <main className="main">
 
-                    <div className='dashboard'>
-                        <img className='img-dashboard' src="/src/assets/img/home.png" alt="" />
-                        <h2 className='nm-menu'>Dashboard</h2>
+                <header className="header">
+                    <h3 className='overview'>Overview</h3>
+                    <div className="user">
+                        <span>Nome_usuario</span>
+                        <img
+                            src="/src/assets/img/login.png" height={30}
+                            alt="user"
+                            className="avatar"
+                        />
                     </div>
+                </header>
 
-                    <div className='produtos'>
-                        <img className='img-produtos' src="/src/assets/img/produtos.png" alt="" />
-                        <h2 className='nm-menu'>Produtos</h2>
+                
+                <section className="cards">
+                    <div className="card">
+                        <h4>Total de Produtos</h4>
+                        <p>586</p>
                     </div>
-
-                    <div className='categorias'>
-                        <img className='img-categorias' src="/src/assets/img/categorias.png" alt="" />
-                        <h2 className='nm-menu'>Categorias</h2>
+                    <div className="card">
+                        <h4>Total em estoque</h4>
+                        <p>586</p>
                     </div>
-
-                </div>
-
-                <div className='principal'>
-
-                    <div className='cards'>
-
-                    <div className='total-produtos estilo-total'>
-                        <h1 className='total'>Total Produtos</h1>
+                    <div className="card">
+                        <h4>Produtos com Estoque baixo</h4>
+                        <p>586</p>
                     </div>
-
-                    <div className='total-produtos estilo-total'>
-                        <h1 className='total'>Total Vendido</h1>
+                    <div className="card">
+                        <h4>Produtos por Categorias</h4>
+                        <p>Gráfico básico</p>
                     </div>
+                </section>
 
-                    <div className='total-produtos estilo-total'>
-                        <h1 className='total'>Baixo Estoque</h1>
+                <section className="actions">
+                    <h3>Painel de Ações</h3>
+                    <div className="buttons">
+                        <button className="btn consultar">Consultar</button>
+                        <button className="btn adicionar">Adicionar</button>
+                        <button className="btn editar">Editar</button>
+                        <button className="btn excluir">Excluir</button>
                     </div>
+                </section>
 
-                    <div className='total-produtos estilo-total'>
-                        <h1 className='total'>Gráfico Produto por Categoria</h1>
-                    </div>
-
-                    </div>
-
-                    <div className='menu-rapido'>
-
-                    <div className='consultarTodosProdutos'>
-                        <button className='estilo-rapido consultar'>Consultar Produtos</button>
-                    </div>
-
-                    <div className='adicionar-produto'>
-                        <button className='estilo-rapido adicionar'>Adicionar Produto</button>
-                    </div>
-
-                    <div className='editar-produto'>
-                        <button className='estilo-rapido editar'>Editar Produto</button>
-                    </div>
-
-                    <div className='Remover-produto'>
-                        <button className='estilo-rapido remover'>Remover Produto</button>
-                    </div> 
-
-                    </div>
-                    
-
-                </div>
-
-            </div>
-
-
+                <section className="ultimos-registros">
+                    <h3>📦 Últimos Produtos Adicionados</h3>
+                    <ul>
+                        <h1>api</h1>
+                    </ul>
+                </section>
+            </main>
         </div>
     );
 }
