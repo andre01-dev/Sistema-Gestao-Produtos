@@ -3,6 +3,10 @@
     border: 0px;
     box-sizing: border-box;
 }
+a{
+  color: black;
+  text-decoration: none;
+}
 
 body {
   margin: 0;
@@ -93,6 +97,8 @@ body {
   height: 150px;
   margin-bottom: 10px;
 }
+
+
 
 
 .activities {
@@ -192,3 +198,384 @@ th, td {
   }
 }
 
+// ---------- CONSULTAR ------------ //
+.consulta-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+
+.consulta-popup {
+  position: relative; 
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #333;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+}
+
+.consulta-fechar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #ff0000;
+  }
+}
+
+.consulta-input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+}
+
+
+.consulta-btn {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+
+.consulta-resultado {
+  margin-top: 20px;       
+  min-height: 150px;       
+  display: flex;
+  flex-direction: column;
+  gap: 15px;               
+  align-items: center;
+  justify-content: flex-start;
+  border-top: 1px solid #eee; 
+  padding-top: 15px;
+}
+// ---------- CONSULTAR ------------ //
+
+
+// ---------- ADICIONAR ------------ //
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+// Pop-up centralizado
+.popup {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  input {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #28a745;
+      outline: none;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    }
+  }
+
+  button {
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+}
+// ---------- ADICIONAR ------------ //
+
+
+// ---------- Editar ------------ //
+.popup-overlay-editar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+// Pop-up centralizado
+.popup-editar {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 90%;
+  width: 1100px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  max-height: 80vh;
+
+  .ajuste-editar{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .input-preco-editar{
+    width: 200px;
+  }
+  .input-quantidade-editar{
+    width: 200px;
+  }
+  input {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    &:focus {
+      border-color: #28a745;
+      outline: none;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    }
+  }
+
+  .bt-buscar{
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  .bt-editar {
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #f39c12;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: hsl(37, 85%, 44%);
+    }
+  }
+}
+// ---------- Editar ------------ //
+
+
+
+
+// ---------- Excluir ------------ //
+.popup-overlay-excluir {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+// Pop-up centralizado
+.popup-excluir {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  width: 90%;
+  width: 500px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-y: auto;
+  max-height: 80vh;
+
+  .ajuste-editar{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  
+  .input-preco-editar{
+    width: 200px;
+  }
+  .input-quantidade-editar{
+    width: 200px;
+  }
+  input {
+    padding: 10px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+
+
+    &:focus {
+      border-color: #28a745;
+      outline: none;
+      box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    }
+  }
+
+  .bt-buscar-excluir{
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #218838;
+    }
+  }
+
+  .bt-excluir {
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #e74c3c;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: hsl(6, 58%, 46%);
+    }
+  }
+  
+}
+
+// ---------- Excluir ------------ //
