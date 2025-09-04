@@ -49,6 +49,7 @@ export default function Produto() {
                             <p>Descrição</p>
                             <p>Preço</p>
                             <p>Categoria</p>
+                            <p>Quantidade</p>
                         </div>
 
                         <div className='todos estilo-total'>

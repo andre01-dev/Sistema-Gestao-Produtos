@@ -7,6 +7,7 @@ export default function App() {
     const [adicionar, setAdicionar] = useState(false);
     const [editar, setEditar] = useState(false);
     const [excluir, setExcluir] = useState(false);
+    const [abrir, setAbrir] = useState(false);
     const [nomeProduto, setNomeProduto] = useState("Nome do Produto");
     const [descricaoProduto, setDescricaoProduto] = useState("Descrição");
     const [precoProduto, setPrecoProduto] = useState(0);
@@ -22,14 +23,14 @@ export default function App() {
                 </div>
                 <nav className='menu-lateral'>
                     <ul>
-                        <Link to ='/'> 
-                        <li>Dashboard</li>
+                        <Link to='/'>
+                            <li>Dashboard</li>
                         </Link>
-                        <Link to= '/produtos'>
-                        <li>Produtos</li>
+                        <Link to='/produtos'>
+                            <li>Produtos</li>
                         </Link>
-                        <Link to= '/categorias'>
-                        <li>Categorias</li>
+                        <Link to='/categorias'>
+                            <li>Categorias</li>
                         </Link>
                     </ul>
                 </nav>
@@ -41,14 +42,35 @@ export default function App() {
                 <header className="header">
                     <h3 className='overview'>Overview</h3>
                     <div className="user">
-                        <span>Nome_usuario</span>
                         <img
                             src="/src/assets/img/login.png" height={30}
                             alt="user"
                             className="avatar"
+                            onClick={() => setAbrir(true)}
                         />
+                        <span>Nome_usuario</span>
                     </div>
+                {abrir && (
+                    <div className="popup-overlay">
+                        <div className="popup">
+                            <button className="fechar-popup" onClick={() => setAbrir(false)}>×</button>
+
+                            <h2>Login</h2>
+
+                            <label>Email</label>
+                            <input type="email" placeholder="Digite seu email" />
+
+                            <label>Senha</label>
+                            <input type="password" placeholder="Digite sua senha" />
+
+                            <button className="btn-entrar" onClick={() => setAbrir(false)}>Entrar</button>
+                        </div>
+                    </div>
+                )}
+                
                 </header>
+
+
 
 
                 <section className="cards">
@@ -151,7 +173,7 @@ export default function App() {
                                     <h2>Excluir Produto</h2>
                                     <label>Nome do Produto</label>
                                     <input type="text" id='input-nome' value={nomeProduto} onChange={(e) => setNomeProduto(e.target.value)} />
-                                    <button className='bt-buscar'>Buscar</button>
+                                    <button className='bt-buscar-excluir'>Buscar</button>
                                     <div className="consulta-resultado">
                                         {/* Aqui aparecerão os cards */}
                                     </div>
