@@ -391,18 +391,32 @@ th, td {
   z-index: 999;
 }
 
-// Pop-up centralizado
 .popup {
-  position: relative;
-  background-color: #fff;
-  padding: 30px 40px;
+  position: relative; /* necessário pro botão ficar relativo a este container */
+  background: #fff;
+  padding: 20px;
   border-radius: 12px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+  width: 400px; /* ajuste conforme seu design */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.popup-close:hover {
+  color: #e74c3c; /* muda a cor quando passa o mouse */
+}
+
 
   h2 {
     text-align: center;
@@ -444,7 +458,7 @@ th, td {
       background-color: #218838;
     }
   }
-}
+
 // ---------- ADICIONAR ------------ //
 
 
@@ -553,6 +567,18 @@ th, td {
 
 
 // ---------- Excluir ------------ //
+.popup-excluir .popup-close:hover {
+  color: #c0392b; /* vermelho mais forte */
+}
+
+.popup-editar .popup-close:hover {
+  color: #2980b9; /* azul */
+}
+
+.popup .popup-close:hover {
+  color: #27ae60; /* verde */
+}
+
 .popup-overlay-excluir {
   position: fixed;
   top: 0;

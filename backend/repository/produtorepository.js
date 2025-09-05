@@ -7,11 +7,11 @@ export async function adicionarProduto(novoProduto) {
         (?,?,?,?,?)
     `
     const [registros] = await conection.query(comando, [
-        novoProduto.nome,
-        novoProduto.descricao,
-        novoProduto.preco,
-        novoProduto.categoria,
-        novoProduto.quantidade
+        novoProduto.nomeProduto,
+        novoProduto.descricaoProduto,
+        novoProduto.precoProduto,
+        novoProduto.categoriaProduto,
+        novoProduto.quantidadeProduto
     ])
     return registros.insertId
 }
