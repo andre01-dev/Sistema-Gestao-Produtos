@@ -1,12 +1,12 @@
 import './produto.scss';
 import { useState, useEffect } from "react";
-import { Link } from 'react-router-dom'; // use react-router-dom no lugar de react-router
+import { Link } from 'react-router-dom';
 
 export default function Produto() {
-  // Estado para armazenar produtos
+
   const [produtos, setProdutos] = useState([]);
 
-  // Simulando um fetch de produtos (pode ser substituído por API real)
+
   useEffect(() => {
     const produtosFake = [
       { id: 1, nome: "Produto A", descricao: "Descrição A", preco: 50, categoria: "Categoria 1", quantidade: 10 },

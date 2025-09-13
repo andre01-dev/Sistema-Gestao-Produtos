@@ -1,6 +1,7 @@
 import './index.scss'
 import { useState, useEffect } from "react";
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
+import Routes from '../routes'
 
 export default function App() {
     const [consulta, setConsulta] = useState(false);
@@ -20,6 +21,17 @@ export default function App() {
     const [editarPreco, setEditarPreco] = useState(0);
     const [editarCategoria, setEditarCategoria] = useState("");
     const [editarQuantidade, setEditarQuantidade] = useState(0);
+    
+    // Inicializa o estado a partir do localStorage
+    const [isLoggedIn, setIsLoggedIn] = useState(
+        localStorage.getItem("logado") === "true"
+    );
+
+    // Atualiza localStorage sempre que o estado mudar
+    useEffect(() => {
+        localStorage.setItem("logado", isLoggedIn ? "true" : "false");
+    }, [isLoggedIn]);
+
 
  
     const [produtos, setProdutos] = useState([]);
@@ -137,6 +149,7 @@ export default function App() {
 
     return (
         <div className="app">
+            <Routes isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
             <aside className="sidebar">
                 <div className='area-logo'>
                     <img src="/src/assets/img/logo.png" height={50} alt="" />
